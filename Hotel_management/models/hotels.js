@@ -1,6 +1,5 @@
 const { DataTypes , Model} = require('sequelize');
 const sequelize = require('../database');
-
 const Hotel = sequelize.define('Hotel', {
     hotel_id : {
         type : DataTypes.INTEGER,
