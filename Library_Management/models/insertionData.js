@@ -38,7 +38,7 @@ const books = [
         "title": "Harry Potter and the Philosopher's Stone",
         "author_id": 2,
         "genre": "Fantasy",
-        "isbn": "9780747532743",
+        "isbn": "9780747532745",
         "publication_year": 1997
     },
     
@@ -54,7 +54,7 @@ const books = [
         "author_id": 3,
         "genre": "Philosophy",
         "isbn": "9788120806057",
-        "publication_year": "300 BCE"
+        "publication_year": 300
     }
 ];
 
@@ -107,59 +107,88 @@ const members = [
     }
 ];
 
-const loans= [
+const loans = [
     {
        
-        "member_id": 1,
         "book_id": 1,
-        "loan_date": "2023-06-15",
-        "due_date": "2023-07-15"
-    },
-    {
-       
-        "member_id": 2,
-        "book_id": 2,
-        "loan_date": "2023-06-20",
-        "due_date": "2023-07-20"
-    },
-    {
-       
-        "member_id": 3,
-        "book_id": 3,
-        "loan_date": "2023-06-25",
-        "due_date": "2023-07-25"
-    },
-    {
-    
         "member_id": 1,
-        "book_id": 4,
-        "loan_date": "2023-07-01",
-        "due_date": "2023-08-01"
+        "loan_date": new Date("2024-06-15"),
+        "due_date": new Date("2024-07-15")
     },
     {
-     
+        
+        "book_id": 2,
         "member_id": 2,
-        "book_id": 5,
-        "loan_date": "2023-07-05",
-        "due_date": "2023-08-05"
+        "loan_date": new Date("2024-06-20"),
+        "due_date": new Date("2024-07-20")
+    },
+    {
+        
+        "book_id": 3,
+        "member_id": 3,
+        "loan_date": new Date("2024-06-25"),
+        "due_date": new Date("2024-07-25")
+    },
+    {
+      
+        "book_id": 4,
+        "member_id": 1,
+        "loan_date": new Date("2024-07-01"),
+        "due_date": new Date("2024-08-01")
     },
     {
        
-        "member_id": 3,
-        "book_id": 6,
-        "loan_date": "2023-07-10",
-        "due_date": "2023-08-10"
+        "book_id": 5,
+        "member_id": 2,
+        "loan_date": new Date("2024-07-05"),
+        "due_date": new Date("2024-08-05")
     },
-   
-
+    {
+      
+        "book_id": 6,
+        "member_id": 3,
+        "loan_date": new Date("2024-07-10"),
+        "due_date": new Date("2024-08-10")
+    }
 ];
 
-
-
+const reservations = [
+    {
+        "book_id": 1,
+        "member_id": 1,
+        "reservation_date": new Date("2024-07-04")
+    },
+    {
+        "book_id": 2,
+        "member_id": 2,
+        "reservation_date": new Date("2024-07-05")
+    },
+    {
+        "book_id": 3,
+        "member_id": 3,
+        "reservation_date": new Date("2024-07-03")
+    },
+    {
+        "book_id": 4,
+        "member_id": 1,
+        "reservation_date": new Date("2024-07-04")
+    },
+    {
+        "book_id": 5,
+        "member_id": 2,
+        "reservation_date": new Date("2024-07-02")
+    },
+    {
+        "book_id": 6,
+        "member_id": 3,
+        "reservation_date": new Date("2024-07-04")
+    }
+];
 module.exports= {
     books,
     authors,
     members,
-    loans
+    loans,
+    reservations
 };
 

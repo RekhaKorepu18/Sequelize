@@ -13,14 +13,14 @@ const Reservation = sequelize.define('Reservation',{
     book_id : {
          type : DataTypes.INTEGER,
          references : {
-            Model : Book,
+            model : Book,
             key : 'id'
         }
     },
     member_id : {
         type : DataTypes.INTEGER,
         references : {
-            Model : Member,
+            model : Member,
             key : 'id'
         }
     },

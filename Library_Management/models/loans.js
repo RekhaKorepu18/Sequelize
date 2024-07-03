@@ -13,7 +13,7 @@ const Loan = sequelize.define('Loan',{
         type : DataTypes.INTEGER,
         allowNull : false,
         references : {
-            Model : Book,
+            model : Book,
             key : 'id'
         }
     },
@@ -21,7 +21,7 @@ const Loan = sequelize.define('Loan',{
         type : DataTypes.INTEGER,
         allowNull : false,
         references : {
-            Model : Member,
+            model : Member,
             key : 'id'
         }
     },

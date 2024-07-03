@@ -1,5 +1,5 @@
 const sequelize = require('./database');
-const {books, authors, members, loans} = require('./models/insertionData');
+const {books, authors, members, loans, reservations} = require('./models/insertionData');
 const Book = require('./models/books');
 const Author = require('./models/authors');
 const Loan = require('./models/loans');
@@ -15,21 +15,32 @@ const Member = require('./models/members');
         console.log("All models synchronized");
         await Book.sync({force: true});
         await Author.sync({force: true});
-
+       
+        // Author
         await Author.bulkCreate(authors);
         console.log(await Author.findAll());
+        // BOOKS 
         await Book.bulkCreate(books);
         console.log(await Book.findAll());
          
+        //Member
        await Member.sync({force: true});
         await Member.bulkCreate(members);
         console.log(await Member.findAll());
-
+        
+        //Loans
         await Loan.sync({force: true});
-       // await Loan.bulkCreate(loans);
-        //console.log(await Loan.findAll());
-        await Reservation.sync({force:true});
+        console.log('loans table created');
+        await Loan.bulkCreate(loans);
+        console.log(await Loan.findAll());
+    
 
+        // Reservations
+        await Reservation.sync({force:true});
+        console.log('reservations table created');
+        await Reservation.bulkCreate(reservations);
+        console.log(await Reservation.findAll());
+      
     }
     catch(error){
         console.log('Unable to connect to database:', error);
