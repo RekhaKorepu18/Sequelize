@@ -41,7 +41,7 @@ Book.hasMany(Reservation);
 
 Reservation.sync({force: true}). then(() => {
     console.log('reservations table created');
- }).catch((err) => { 
-      console.error('Error while creating reservations table', err);
+ }).catch((error) => { 
+      console.error('Error while creating reservations table', error);
  });
  module.exports = Reservation;
