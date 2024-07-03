@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize');
+const {DataTypes} = require('sequelize');
 const path = require('path');
 require('dotenv').config({
     override: true,
@@ -12,6 +13,7 @@ const sequelize = new Sequelize(process.env.DATABASE, process.env.USER, process.
 });
 
 module.exports = sequelize;
+
 
 
 
