@@ -150,13 +150,7 @@ const loans= [
         "loan_date": "2023-07-10",
         "due_date": "2023-08-10"
     },
-    {
-       
-        "member_id": 3,
-        "book_id": 6,
-        "loan_date": "2023-07-10",
-        "due_date": "2023-08-10"
-    },
+   
 
 ];
 
